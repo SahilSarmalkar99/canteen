@@ -5,8 +5,8 @@ export const getDashboard = async (req, res) => {
   try {
     // Food Counts
     const totalFoodsPromise = Food.countDocuments();
-    const availableFoodsPromise = Food.countDocuments({ isAvailable: true });
-    const unavailableFoodsPromise = Food.countDocuments({ isAvailable: false });
+    const availableFoodsPromise = Food.countDocuments({ available: true });
+    const unavailableFoodsPromise = Food.countDocuments({ available: false });
 
     // Orders
     const totalOrdersPromise = Order.countDocuments();
