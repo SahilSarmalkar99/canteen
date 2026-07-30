@@ -20,7 +20,7 @@ export default function Dashboard() {
     try {
       const res = await getDashboard();
 
-      console.log(res.data);
+      // console.log(res.data);
 
       setDashboard(res.data.dashboard);
     } catch (err) {
